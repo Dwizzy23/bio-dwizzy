@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dwizzy | Bio</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+  min-height:100vh;
+  font-family:Arial,Helvetica,sans-serif;
+  color:#fff;
+  background:
+    radial-gradient(circle at 18% 40%,rgba(59,196,18,.9),transparent 28%),
+    radial-gradient(circle at 85% 45%,rgba(132,0,255,.85),transparent 32%),
+    linear-gradient(135deg,#020402,#05000c 60%,#120024);
+  background-size:180% 180%;
+  animation:bg 8s ease infinite;
+  display:flex;
+  justify-content:center;
+  padding:32px 14px;
+}
+
+@keyframes bg{
+  0%,100%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+}
+
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  background:
+    linear-gradient(90deg,rgba(59,196,18,.18),transparent 45%,rgba(140,0,255,.2)),
+    url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+  pointer-events:none;
+}
+
+.shell{
+  width:100%;
+  max-width:760px;
+  border:1.5px solid rgba(150,0,255,.9);
+  border-left-color:#3bc412;
+  border-radius:38px;
+  padding:34px;
+  background:rgba(0,0,0,.56);
+  box-shadow:
+    0 0 55px rgba(59,196,18,.55),
+    0 0 75px rgba(140,0,255,.45),
+    inset 0 0 45px rgba(255,255,255,.03);
+  backdrop-filter:blur(18px);
+  position:relative;
+}
+
+.mute{
+  position:absolute;
+  top:24px;
+  right:24px;
+  width:62px;
+  height:62px;
+  border-radius:50%;
+  border:2px solid #a600ff;
+  border-left-color:#3bc412;
+  background:rgba(0,0,0,.55);
+  color:white;
+  font-size:25px;
+  cursor:pointer;
+  box-shadow:0 0 25px rgba(150,0,255,.75);
+}
+
+.avatar{
+  width:210px;
+  height:210px;
+  border-radius:50%;
+  margin:0 auto 18px;
+  padding:5px;
+  background:linear-gradient(135deg,#3bc412,#85ff00,#3b18ba,#c000ff);
+  box-shadow:0 0 35px #3bc412,0 0 55px #8d00ff;
+  animation:pulse 3s infinite alternate;
+}
+
+.avatar img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  border-radius:50%;
+  display:block;
+}
+
+@keyframes pulse{
+  from{transform:scale(1)}
+  to{transform:scale(1.035)}
+}
+
+h1{
+  text-align:center;
+  font-size:70px;
+  font-weight:900;
+  letter-spacing:-4px;
+  background:linear-gradient(90deg,#3bc412,#c000ff);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  text-shadow:0 0 35px rgba(59,196,18,.65);
+}
+
+.subtitle{
+  text-align:center;
+  letter-spacing:7px;
+  font-size:13px;
+  margin-top:8px;
+}
+
+.subtitle span{color:#3bc412}
+
+.links{
+  margin:34px auto 28px;
+  max-width:580px;
+  display:grid;
+  gap:10px;
+}
+
+.link{
+  height:54px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 20px;
+  color:white;
+  text-decoration:none;
+  font-weight:800;
+  letter-spacing:.5px;
+  background:rgba(0,0,0,.58);
+  border:1px solid rgba(140,0,255,.85);
+  border-left-color:#3bc412;
+  border-radius:14px;
+  box-shadow:0 0 18px rgba(59,196,18,.18);
+  transition:.2s;
+}
+
+.link:hover{
+  transform:translateY(-3px) scale(1.02);
+  box-shadow:0 0 25px #3bc412,0 0 30px #8d00ff;
+}
+
+.link span{
+  display:flex;
+  align-items:center;
+  gap:16px;
+}
+
+.link i:first-child{
+  font-size:26px;
+  width:28px;
+}
+
+.arrow{
+  color:#d000ff;
+  text-shadow:0 0 12px #d000ff;
+}
+
+.box{
+  margin-top:14px;
+  padding:22px;
+  border-radius:18px;
+  background:rgba(0,0,0,.55);
+  border:1px solid rgba(150,0,255,.85);
+  border-left-color:#3bc412;
+}
+
+.box h2{
+  color:#3bc412;
+  font-size:22px;
+  margin-bottom:12px;
+  font-style:italic;
+  text-shadow:0 0 14px #3bc412;
+}
+
+.box:nth-of-type(2) h2{
+  color:#c000ff;
+  text-shadow:0 0 14px #c000ff;
+}
+
+.box p{
+  line-height:1.65;
+  opacity:.92;
+  font-size:15px;
+}
+
+.footer{
+  margin-top:28px;
+  text-align:center;
+  font-size:12px;
+  letter-spacing:7px;
+  opacity:.75;
+}
+
+audio{display:none}
+
+@media(max-width:600px){
+  .shell{padding:24px 16px}
+  h1{font-size:54px}
+  .avatar{width:180px;height:180px}
+  .subtitle{letter-spacing:4px;font-size:11px}
+  .mute{width:50px;height:50px;font-size:20px}
+}
+</style>
+</head>
+
+<body>
+
+<div class="shell">
+  <button class="mute" id="muteBtn"><i class="fa-solid fa-volume-high"></i></button>
+
+  <audio id="music" autoplay loop>
+    <source src="rusina-sheder.mp3" type="audio/mpeg">
+  </audio>
+
+  <div class="avatar">
+    <img src="avatar.png" alt="Dwizzy avatar">
+  </div>
+
+  <h1>DWIZZY</h1>
+  <div class="subtitle">
+    <span>ARTYSTA Z TRÓJMIASTA</span><br>
+    MIXING ENGINEER • NOWY ROZDZIAŁ
+  </div>
+
+  <div class="links">
+    <a class="link" href="https://instagram.com/dwizzy23_" target="_blank"><span><i class="fa-brands fa-instagram"></i>INSTAGRAM</span><i class="fa-solid fa-chevron-right arrow"></i></a>
+    <a class="link" href="#" target="_blank"><span><i class="fa-brands fa-spotify"></i>SPOTIFY</span><i class="fa-solid fa-chevron-right arrow"></i></a>
+    <a class="link" href="https://soundcloud.com/dwizzy23_i" target="_blank"><span><i class="fa-brands fa-soundcloud"></i>SOUNDCLOUD</span><i class="fa-solid fa-chevron-right arrow"></i></a>
+    <a class="link" href="#" target="_blank"><span><i class="fa-brands fa-youtube"></i>YOUTUBE</span><i class="fa-solid fa-chevron-right arrow"></i></a>
+    <a class="link" href="#" target="_blank"><span><i class="fa-brands fa-discord"></i>DISCORD HAVE FVCKED</span><i class="fa-solid fa-chevron-right arrow"></i></a>
+    <a class="link" href="https://dwizzy.space" target="_blank"><span><i class="fa-solid fa-globe"></i>STRONA DWIZZY.SPACE</span><i class="fa-solid fa-chevron-right arrow"></i></a>
+    <a class="link" href="mailto:kontakt.wiktor.ds@gmail.com"><span><i class="fa-regular fa-envelope"></i>KONTAKT</span><i class="fa-solid fa-chevron-right arrow"></i></a>
+    <a class="link" href="#" target="_blank"><span><i class="fa-solid fa-diamond"></i>TIDAL</span><i class="fa-solid fa-chevron-right arrow"></i></a>
+    <a class="link" href="#" target="_blank"><span><i class="fa-brands fa-apple"></i>APPLE MUSIC</span><i class="fa-solid fa-chevron-right arrow"></i></a>
+    <a class="link" href="#" target="_blank"><span><i class="fa-solid fa-chart-simple"></i>DEEZER</span><i class="fa-solid fa-chevron-right arrow"></i></a>
+    <a class="link" href="#" target="_blank"><span><i class="fa-brands fa-tiktok"></i>TIKTOK</span><i class="fa-solid fa-chevron-right arrow"></i></a>
+  </div>
+
+  <div class="box">
+    <h2>BIO</h2>
+    <p>
+      Dwizzy — artysta z Trójmiasta. Do tej pory działał jako Mixing Engineer,
+      kreując brzmienie publicznie lub za kulisami takich twórców jak Rusina,
+      Sheder, Vkie, Fekir, Kosjusz, Waima, Okekel, Wavyzien, Hilary Incognito,
+      Gofrez, Akio i wielu innych. Po latach spędzonych przy miksach i masteringu,
+      Dwizzy otwiera nowy rozdział — tym razem po stronie mikrofonu.
+    </p>
+  </div>
+
+  <div class="box">
+    <h2>O MNIE</h2>
+    <p>
+      Jestem inżynierem dźwięku specjalizującym się w miksie i masteringu
+      nowoczesnej muzyki. Moim priorytetem jest czystość brzmienia, energia
+      i tłuste uderzenie, które dobrze sprawdza się zarówno na słuchawkach,
+      jak i dużych scenach. Pracowałem z topowymi newcomerami i twórcami,
+      którzy budują nowe brzmienie polskiej sceny.
+    </p>
+  </div>
+
+  <div class="footer">© 2026 DWIZZY • BIO.DWIZZY.SPACE</div>
+</div>
+
+<script>
+const music = document.getElementById("music");
+const muteBtn = document.getElementById("muteBtn");
+
+music.volume = 0.35;
+
+document.body.addEventListener("click", () => {
+  music.play().catch(() => {});
+}, { once:true });
+
+muteBtn.addEventListener("click", (e) => {
+  e.stopPropagation();
+  music.muted = !music.muted;
+  muteBtn.innerHTML = music.muted
+    ? '<i class="fa-solid fa-volume-xmark"></i>'
+    : '<i class="fa-solid fa-volume-high"></i>';
+});
+</script>
+
+</body>
+</html>
