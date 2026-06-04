@@ -1,192 +1,191 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Under Dwizzy Space – Twoja Muzyka w Kosmosie</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
-<style>
-  /* Reset */
-  * {
-    margin: 0; padding: 0; box-sizing: border-box;
-  }
-  body {
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #0b3d0b, #052005); /* ciemnozielone tło */
-    color: #eee;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    overflow-x: hidden;
-  }
-  header {
-    background: linear-gradient(90deg, #00ff6a, #007f3f); /* gradient zielony */
-    padding: 1.8rem 2rem;
-    box-shadow: 0 3px 10px rgba(0, 255, 106, 0.5);
-    text-align: center;
-    position: sticky;
-    top: 0;
-    z-index: 10;
-  }
-  header h1 {
-    font-weight: 600;
-    font-size: 2.4rem;
-    letter-spacing: 0.1rem;
-    text-transform: uppercase;
-    color: #fff;
-    user-select: none;
-    text-shadow: 0 2px 6px rgba(255,255,255,0.2);
-  }
-  main {
-    flex: 1;
-    padding: 3rem 2rem;
-    max-width: 900px;
-    margin: 0 auto;
-  }
-  section.intro {
-    text-align: center;
-    margin-bottom: 3rem;
-    animation: fadeSlideIn 1s ease forwards;
-    opacity: 0;
-  }
-  section.intro h2 {
-    font-weight: 600;
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    background: linear-gradient(90deg, #00ff6a, #007f3f);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  section.intro p {
-    font-weight: 300;
-    font-size: 1.2rem;
-    color: #cce5cc;
-    max-width: 600px;
-    margin: 0 auto;
-  }
-  section.playlist {
-    background: #123412; /* ciemniejszy zielony */
-    padding: 2rem;
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0, 255, 106, 0.3);
-    animation: fadeSlideIn 1.4s ease forwards;
-    opacity: 0;
-  }
-  section.playlist h3 {
-    margin-bottom: 1.5rem;
-    font-weight: 600;
-    font-size: 1.8rem;
-    color: #00ff6a;
-    user-select: none;
-  }
-  ul.track-list {
-    list-style: none;
-  }
-  ul.track-list li {
-    background: #234523;
-    margin-bottom: 1rem;
-    padding: 0.9rem 1rem;
-    border-radius: 8px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
-    transition: background 0.3s ease, color 0.3s ease;
-  }
-  ul.track-list li:hover {
-    background: #00ff6a;
-    color: #121212;
-  }
-  ul.track-list li.playing {
-    background: #007f3f;
-    color: #cce5cc;
-    font-weight: 700;
-    box-shadow: 0 0 8px #00ff6a;
-  }
-  button.play-btn {
-    background: none;
-    border: 2px solid #00ff6a;
-    border-radius: 50%;
-    width: 32px;
-    height: 32px;
-    color: #00ff6a;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background 0.3s, color 0.3s;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  button.play-btn:hover {
-    background: #00ff6a;
-    color: #121212;
-  }
-  footer {
-    background: #052005;
-    padding: 1rem 2rem;
-    text-align: center;
-    font-size: 0.9rem;
-    color: #669966;
-    user-select: none;
-  }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dwizzy | Bio</title>
+  <meta name="description" content="Dwizzy — artysta z Trójmiasta, mixing engineer, nowy rozdział po stronie mikrofonu." />
 
-  /* Animations */
-  @keyframes fadeSlideIn {
-    0% {opacity: 0; transform: translateY(20px);}
-    100% {opacity: 1; transform: translateY(0);}
-  }
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-  /* Responsive */
-  @media (max-width: 600px) {
-    header h1 {
-      font-size: 1.8rem;
+    body {
+      min-height: 100vh;
+      font-family: Arial, sans-serif;
+      color: white;
+      background:
+        radial-gradient(circle at top, rgba(59,196,18,0.35), transparent 35%),
+        linear-gradient(135deg, #3bc412, #3b18ba);
+      display: flex;
+      justify-content: center;
+      padding: 30px 16px;
     }
-    section.intro h2 {
-      font-size: 1.6rem;
+
+    .container {
+      width: 100%;
+      max-width: 520px;
+      text-align: center;
     }
-    section.playlist {
-      padding: 1.5rem;
+
+    .card {
+      background: rgba(0, 0, 0, 0.45);
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: 28px;
+      padding: 28px;
+      backdrop-filter: blur(18px);
+      box-shadow: 0 25px 80px rgba(0,0,0,0.45);
     }
-    ul.track-list li {
-      font-size: 0.95rem;
+
+    .logo {
+      width: 120px;
+      height: 120px;
+      margin: 0 auto 18px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #3bc412, #3b18ba);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 42px;
+      font-weight: 900;
+      letter-spacing: -2px;
+      box-shadow: 0 0 45px rgba(59,196,18,0.7);
     }
-  }
-</style>
+
+    h1 {
+      font-size: 46px;
+      margin-bottom: 8px;
+      letter-spacing: -2px;
+    }
+
+    .tagline {
+      font-size: 15px;
+      opacity: 0.85;
+      margin-bottom: 22px;
+    }
+
+    .music-player {
+      margin: 22px 0;
+      padding: 16px;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.1);
+    }
+
+    audio {
+      width: 100%;
+      margin-top: 10px;
+    }
+
+    .section {
+      margin-top: 24px;
+      text-align: left;
+    }
+
+    .section h2 {
+      font-size: 22px;
+      margin-bottom: 10px;
+      color: #b8ff9e;
+    }
+
+    .section p {
+      font-size: 14.5px;
+      line-height: 1.65;
+      opacity: 0.92;
+    }
+
+    .links {
+      margin-top: 26px;
+      display: grid;
+      gap: 12px;
+    }
+
+    .link {
+      text-decoration: none;
+      color: white;
+      padding: 15px 18px;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.18);
+      font-weight: 700;
+      transition: 0.2s ease;
+    }
+
+    .link:hover {
+      transform: scale(1.03);
+      background: linear-gradient(135deg, #3bc412, #3b18ba);
+      box-shadow: 0 0 25px rgba(59,196,18,0.55);
+    }
+
+    .footer {
+      margin-top: 22px;
+      font-size: 12px;
+      opacity: 0.7;
+    }
+
+    .glow {
+      color: #b8ff9e;
+      text-shadow: 0 0 18px rgba(59,196,18,0.8);
+    }
+  </style>
 </head>
+
 <body>
+  <main class="container">
+    <div class="card">
+      <div class="logo">DZ</div>
 
-<header>
-  <h1>Under Dwizzy Space</h1>
-</header>
+      <h1>Dwizzy</h1>
+      <p class="tagline">Artysta z Trójmiasta · Mixing Engineer · Nowy rozdział</p>
 
-<main>
-  <section class="intro" id="intro">
-    <h2>Twoja muzyka w kosmosie</h2>
-    <p>Przenieś się w inny wymiar dźwięku — słuchaj, odkrywaj, kolaboruj, mixuj, tworz bity i realizuj artystow, zanurz się w najlepszych trackach w underze.</p>
-  </section>
+      <div class="music-player">
+        <strong class="glow">▶ Teraz gra: Dwizzy</strong>
+        <audio controls autoplay loop>
+          <source src="music.mp3" type="audio/mpeg">
+          Twoja przeglądarka nie obsługuje audio.
+        </audio>
+      </div>
 
-  <section class="playlist" id="playlist">
-    <h3>Playlista</h3>
-    <ul class="track-list" id="trackList">
-      <!-- Tracki pojawią się tutaj dynamicznie -->
-    </ul>
+      <div class="links">
+        <a class="link" href="https://instagram.com/dwizzy23_" target="_blank">Instagram</a>
+        <a class="link" href="#" target="_blank">Spotify</a>
+        <a class="link" href="https://soundcloud.com/dwizzy23_i" target="_blank">SoundCloud</a>
+        <a class="link" href="#" target="_blank">YouTube</a>
+        <a class="link" href="#" target="_blank">Discord HAVE FVCKED</a>
+        <a class="link" href="https://dwizzy.space" target="_blank">Strona Dwizzy.space</a>
+        <a class="link" href="mailto:kontakt.wiktor.ds@gmail.com">Kontakt</a>
+        <a class="link" href="#" target="_blank">TIDAL</a>
+        <a class="link" href="#" target="_blank">Apple Music</a>
+        <a class="link" href="#" target="_blank">Deezer</a>
+        <a class="link" href="#" target="_blank">TikTok</a>
+      </div>
 
-   <!-- Osadzona playlista Spotify -->
-<div style="margin-top: 2rem; text-align: center;">
-  <iframe 
-    src="https://open.spotify.com/embed/playlist/0HROLwh1sN3efYFAcrXWOK" 
-    width="100%" 
-    height="380" 
-    frameborder="0" 
-    allowtransparency="true" 
-    allow="encrypted-media"
-    style="border-radius:12px;">
-  </iframe>
-</div>
+      <div class="section">
+        <h2>Bio</h2>
+        <p>
+          Dwizzy — artysta z Trójmiasta. Do tej pory działał jako Mixing Engineer,
+          kreując brzmienie publicznie lub za kulisami takich twórców jak Rusina,
+          Sheder, Vkie, Fekir, Kosjusz, Waima, Okekel, Wavyzien, Hilary Incognito,
+          Gofrez, Akio i wielu innych. Po latach spędzonych przy miksach i masteringu,
+          Dwizzy otwiera nowy rozdział — tym razem po stronie mikrofonu.
+        </p>
+      </div>
 
-<footer>
-  © 2025 Dwizzy Space &mdash; Wszystkie prawa zastrzeżone.
-</footer>
+      <div class="section">
+        <h2>O mnie</h2>
+        <p>
+          Jestem inżynierem dźwięku specjalizującym się w miksie i masteringu
+          nowoczesnej muzyki. Moim priorytetem jest czystość brzmienia, energia
+          i tłuste uderzenie, które dobrze sprawdza się zarówno na słuchawkach,
+          jak i dużych scenach. Pracowałem z topowymi newcomerami i twórcami,
+          którzy budują nowe brzmienie polskiej sceny.
+        </p>
+      </div>
 
+      <p class="footer">© 2026 Dwizzy · bio.dwizzy.space</p>
+    </div>
+  </main>
 </body>
 </html>
